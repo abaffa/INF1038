@@ -1,5 +1,7 @@
-# Notebooks p/ INF1038 Aprendizado Automático 2025.2
-[Link p/ EAD](https://ead.puc-rio.br/course/view.php?id=106583)
+# Notebooks p/ INF1038 Aprendizado Automático 2026.2
+[Link p/ EAD](https://ead.puc-rio.br/course/view.php?id=118727)
+
+Os arquivos serão revisados (e possívelmente atualizado) ao longo do semestre.
 
 
 ### Bibliografia
