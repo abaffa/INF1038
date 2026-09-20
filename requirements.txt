@@ -1,0 +1,12 @@
+pip install jupyter scikit-learn pandas xlrd numpy matplotlib seaborn
+pip install openpyxl
+pip install stemgraphic
+pip install python-ternary
+pip install chardet
+pip install ftfy
+pip install missingno
+pip install python-Levenshtein
+pip install shap
+pip install bottleneck 
+pip install mrmr_selection
+pip install sklearn_relief

@@ -11,7 +11,7 @@ from sklearn.utils import check_X_y
 from sklearn.preprocessing import StandardScaler
 from multiprocessing import cpu_count
 from sklearn.base import BaseEstimator
-from sklearn.feature_selection.base import SelectorMixin
+from sklearn.feature_selection._base import SelectorMixin
 import bottleneck as bn
 from . import mi
 
@@ -232,7 +232,7 @@ class MutualInformationFeatureSelector(BaseEstimator, SelectorMixin):
         # ---------------------------------------------------------------------
 
         self.n_features_ = len(S)
-        self._support_mask = np.zeros(p, dtype=np.bool)
+        self._support_mask = np.zeros(p, dtype=bool)
         self._support_mask[S] = True
         self.ranking_ = S
         self.mi_ = S_mi

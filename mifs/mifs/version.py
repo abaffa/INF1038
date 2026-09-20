@@ -51,7 +51,8 @@ def _import_module_with_version_check(module_name, minimum_version,
                                       install_info=None):
     """Check that module is installed with a recent enough version
     """
-    from distutils.version import LooseVersion
+    #from distutils.version import LooseVersion
+    from packaging.version import Version
 
     try:
         module = __import__(module_name)
@@ -66,9 +67,12 @@ def _import_module_with_version_check(module_name, minimum_version,
     # Avoid choking on modules with no __version__ attribute
     module_version = getattr(module, '__version__', '0.0.0')
 
-    version_too_old = (not LooseVersion(module_version) >=
-                       LooseVersion(minimum_version))
+    #version_too_old = (not LooseVersion(module_version) >=
+    #                   LooseVersion(minimum_version))
 
+    version_too_old = (not Version(module_version) >=
+                       Version(minimum_version))
+    
     if version_too_old:
         message = (
             'A {module_name} version of at least {minimum_version} '
